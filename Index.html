@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Model Import/Export</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <style>
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .nav-tabs .nav-item {
+      margin-bottom: -1px;
+    }
+    .tab-content {
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-top: none;
+      border-radius: 0 0 5px 5px;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.nav-link').click(function(){
+        $(this).tab('show');
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center mb-4">Model Import/Export</h1>
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#exportTab">Export</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#importTab">Import</a>
+      </li>
+    </ul>
+    <div class="tab-content">
+      <div id="exportTab" class="tab-pane fade">
+        <h2 class="mb-4">Export Model</h2>
+        <form>
+          <div class="form-group">
+            <label for="exportModel">Select Model:</label>
+            <select id="exportModel" class="form-control">
+              <option value="model1">Model 1</option>
+              <option value="model2">Model 2</option>
+              <option value="model3">Model 3</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Export</button>
+        </form>
+      </div>
+      <div id="importTab" class="tab-pane fade show active">
+        <h2 class="mb-4">Import Model</h2>
+        <form>
+          <div class="form-group">
+            <label for="importModel">Select Model:</label>
+            <select id="importModel" class="form-control">
+              <option value="model1">Model 1</option>
+              <option value="model2">Model 2</option>
+              <option value="model3">Model 3</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Import</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
